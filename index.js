@@ -1,22 +1,34 @@
 const express = require("express");
 const app = express();
 
-app.post("/signup", (req,res)=>{
-
+app.post("/user/signup", (req,res)=>{
+    res.json({
+        message: "signup endpoint"
+    })
 });
 
-app.post("/login", (req,res)=>{
-
+app.post("/user/signin", (req,res)=>{
+    res.json({
+        message: "sigin endpoint"
+    })
 });
-app.post("/purchaseCourse", (req,res)=>{
-
-});
-app.get("/all Courses", (req,res)=>{
-
-});
-app.get("/myCourses", (req,res)=>{
-
+ 
+app.get("/user/purchases", (req,res)=>{
+    res.json({
+        message: "purchases endpoint"
+    })
 });
 
+app.get("/course/purchase", (req,res)=>{
+    res.json({
+        message: "purchases endpoint"
+    })
+});
+
+app.get("/courses", (req,res)=>{
+    res.json({
+        message: "courses endpoint"
+    })
+});
 
 app.listen(3000);
