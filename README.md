@@ -1,6 +1,6 @@
 # 📚 Coursella
 
-**Coursella** is a full-stack web application built using the **MERN stack** (MongoDB, Express.js, React, Node.js). It serves as a platform for **buying and selling online courses**, making it easy for educators to publish content and for learners to discover and purchase courses.
+**Coursella** is an under development full-stack web application built using the **MERN stack** (MongoDB, Express.js, React, Node.js). It serves as a platform for **buying and selling online courses**, making it easy for educators to publish content and for learners to discover and purchase courses.
 
 ## 🚀 Features
 
