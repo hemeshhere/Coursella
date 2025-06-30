@@ -1,6 +1,6 @@
 const express= require("express");
 const Router= express.Router;  // OR const { Router } = require("express");
-const {userModel} = require("../db")
+const {userModel, purchaseModel} = require("../db")
 const { z }=require("zod");
 const { tr } = require("zod/v4/locales");
 const userRouter = Router();
@@ -98,9 +98,11 @@ userRouter.post("/signin",async (req,res)=>{
 userRouter.get("/purchases",userMiddleware,async (req,res)=>{
     const userId=req.userId;
     const purchases=await purchaseModel.find({
-        userId,
-        courseId
+        userId
     });
+    const courseData=await purchaseModel.find({
+        _id:{$in: purchases.map(x=>x.courseId)}
+    })
     res.json({
         purchases
     })
